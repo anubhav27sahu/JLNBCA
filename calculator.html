@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> </title>
+	<link rel="icon" type="image/icon" href="calc.png">
+	<style type="text/css">
+		table{border: 1px solid black;
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+		input[type="button"]{
+			width: 100%;
+			background-color: red;
+			padding: 20px 40px;
+			color: white;
+			font-size: 24px;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px;
+		}
+		input[type="text"]{
+			padding: 20px 30px;
+			font-size: 24px;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px;
+
+		}
+		input[type="button"]:hover{
+			
+			background-color:green;
+			
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">Calculator</h1>
+	<table>
+		<tr>
+			<th colspan="3"><input type="text" name="" id="result"> </th>
+		</tr>
+		<tr>
+			<td>
+			<input type="button" name="" value="1" class="cal" onclick="show('1')">
+			</td>
+			<td>
+			<input type="button" name="" value="2"  onclick="show('2')">
+			</td>
+			<td>
+				<input type="button" name="" value="3" class="cal" onclick="show('3')">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" name="" value="4" class="cal" onclick="show('4')" >
+			</td>
+			<td>
+				<input type="button" name="" value="5" class="cal" onclick="show('5')">
+			</td>
+			<td>
+				<input type="button" name="" value="6" class="cal" onclick="show('6')">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" name="" value="7" class="cal" onclick="show('7')" >
+			</td>
+			<td>
+				<input type="button" name="" value="8" class="cal" onclick="show('8')">
+			</td>
+			<td>
+				<input type="button" name="" value="9" class="cal" onclick="show('1')">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" name="" value="0" class="cal" onclick="show('0')" >
+			</td>
+			<td>
+				<input type="button" name="" value="+" class="cal" onclick="show('+')">
+			</td>
+			<td>
+				<input type="button" name="" value="-" class="cal" onclick="show('-')">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" name="" value="*"class="cal" onclick="show('*')" >
+			</td>
+			<td>
+				<input type="button" name="" value="/" class="cal" onclick="show('/')" >
+			</td>
+			<td>
+				<input type="button" name="" value="c" onclick="clear()" >
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<input type="button" name="" value="=" onclick="calculate()">
+			</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		 const display = document.getElementsByClassName('cal');
+		function show(input) 
+		{
+	      
+	       document.getElementById('result').value +=input;
+		}
+		function clear()
+		{
+           document.getElementById('result').value ='';
+		}
+		function calculate()
+		{
+			document.getElementById('result').value=eval(document.getElementById('result').value);
+		}
+		
+	</script>
+
+</body>
+</html>
